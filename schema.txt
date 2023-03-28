@@ -1,0 +1,27 @@
+-VIDEOGAME
+id: primary_key || title: VARCHAR(100) || plot: TEXT || release_data: DATE
+software_house_id: foreign_key  ||  pegi_id: foreign_key
+ 
+-SOFTWARE_HOUSE
+id: primary_key  ||  name: VARCHAR(100)  ||  iva: VARCHAR(11)  ||  city: VARCHAR(85)  ||  country: VARCHAR(56)
+
+-TOURNAMENT
+id: primary_key  ||  name: VARCHAR(100)  ||  date: DATE  ||  city: VARCHAR(85)  ||  videogame_if: foreign_key
+
+-GAMER
+id: primary_key  ||  name: VARCHAR(50)  ||  surname: VARCHAR(25)  ||  nickname: VARCHAR(25)  || city: VARCHAR(85)
+
+-RATING
+id: primary_key  ||  videogame_id: foreign_key  ||  gamer_id: foreign_key  ||  vote: TINYINT
+
+-PEGI
+id: primary_key  ||  name: VARCHAR(25)  ||  age: TINYINT
+
+-AWARD
+id: primary_key  ||  name: VARCHAR(25)  ||  year: DATE
+
+-CATEGORY
+id: primary_key  ||  name: VARCHAR(25)
+
+-PLATFORM
+id: primary_key  ||  name: VARCHAR(25)
